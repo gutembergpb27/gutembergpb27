@@ -53,7 +53,7 @@ Only areas demonstrated in the Nexus repository are listed. Each one links to th
 ## Nexus Runtime Platform
 
 - **Status:** experimental. The latest pre-release is `v2700.0.0-rc2`, and the latest stable GitHub release is `v2500.0.0`.
-- **Recent work:** a read-only [consensus-safety audit](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/NEXUS_V2700_W08A_CONSENSUS_SAFETY_AUDIT.md) (merged, #103) and an explicit fail-closed cluster mode (`NEXUS_CLUSTER_MODE`) proposed in [#104](https://github.com/gutembergpb27/Termux-nexus/pull/104), not merged yet.
+- **Recent work:** a read-only [consensus-safety audit](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/NEXUS_V2700_W08A_CONSENSUS_SAFETY_AUDIT.md) (merged, #103) and an explicit fail-closed cluster mode (`NEXUS_CLUSTER_MODE`) merged in [#104](https://github.com/gutembergpb27/Termux-nexus/pull/104): nodes now fail closed unless the cluster mode is set explicitly.
 - **Not claimed:** distributed consensus, partition safety or production readiness. Nexus has no persistent election term/vote, no leader fencing and no majority commit. Multi-node writes are blocked only when `NEXUS_CLUSTER_SIZE` is set to the real node count; the default (`1`) leaves that gate off. The roadmap keeps distributed writes blocked until those invariants are demonstrated.
 - **Known limitations** are documented in [docs/canonical/LIMITATIONS.md](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/canonical/LIMITATIONS.md) and [docs/PROJECT_STATE.md](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/PROJECT_STATE.md).
 
@@ -121,7 +121,7 @@ Somente áreas demonstradas no repositório Nexus. As evidências estão na tabe
 ### Nexus Runtime Platform
 
 - **Status:** experimental. A pré-release mais recente é a `v2700.0.0-rc2`, e a release estável mais recente no GitHub é a `v2500.0.0`.
-- **Trabalho recente:** uma [auditoria de segurança de consenso](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/NEXUS_V2700_W08A_CONSENSUS_SAFETY_AUDIT.md) somente leitura (integrada, #103) e um modo de cluster *fail-closed* explícito (`NEXUS_CLUSTER_MODE`) proposto na [#104](https://github.com/gutembergpb27/Termux-nexus/pull/104), ainda sem merge.
+- **Trabalho recente:** uma [auditoria de segurança de consenso](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/NEXUS_V2700_W08A_CONSENSUS_SAFETY_AUDIT.md) somente leitura (integrada, #103) e um modo de cluster *fail-closed* explícito (`NEXUS_CLUSTER_MODE`) integrado na [#104](https://github.com/gutembergpb27/Termux-nexus/pull/104): os nós agora falham de forma segura, a menos que o modo de cluster seja definido explicitamente.
 - **Não declarado:** consenso distribuído, segurança sob partição de rede ou prontidão para produção. O Nexus não tem termo/voto de eleição persistente, *fencing* de líder nem commit por maioria. Escritas multinó só são bloqueadas quando `NEXUS_CLUSTER_SIZE` é definida com o número real de nós; o padrão (`1`) deixa esse bloqueio desligado. O roadmap mantém as escritas distribuídas bloqueadas até que essas invariantes sejam demonstradas.
 - **Limitações conhecidas** estão documentadas em [docs/canonical/LIMITATIONS.md](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/canonical/LIMITATIONS.md) e [docs/PROJECT_STATE.md](https://github.com/gutembergpb27/Termux-nexus/blob/main/docs/PROJECT_STATE.md).
 
